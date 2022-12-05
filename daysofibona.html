@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const n = 20;
+        let f1 = 1, f2 = 1;
+        document.write(`${f1}, ${f2}, `);
+        for(let a = 3; a <= n; a++)    {
+            let nextnumber = f1 + f2;
+            document.write(`${nextnumber}, `);
+            // gan gia tri f1, f2 moi
+            f1 = f2;
+            f2 = nextnumber;
+
+
+        }
+    </script>
+</body>
+</html>

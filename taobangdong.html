@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Nhập số dòng:
+   <input type="number" min="1" id="soDong"><br>
+   Nhập số cột:
+   <input type="number" min="1" id="soCot"><br>
+   <button type="button">Vẽ bảng</button>
+   <button type="button">Xóa Bảng</button> -->
+   <div id="ket_qua">
+        <table id="bang" border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Họ Tên</td>
+                </tr>
+            </thead>
+            <tbody id="noi_dung_bang"></tbody>
+        </table>
+   </div>
+   <button type="button" onclick="them2Dong()">Thêm 2 dòng, 2 cột</button>
+   <button type="button" onclick="xoaDong()">Xóa Bảng</button>
+   <script>
+        function them2Dong()    {
+            let dong = document.createElement("tr");
+            let o_1 = document.createElement("td");
+            let o_2 = document.createElement("td");
+            o_1.innerHTML = "STT";
+            o_2.innerHTML = "Lê Thị Lệ";
+            dong.appendChild(o_1);
+            dong.appendChild(o_2);
+            document.getElementById("noi_dung_bang").appendChild(dong);
+        }
+        function xoaDong()  {
+            let xoadong=""
+            document.getElementById("noi_dung_bang").innerHTML='A Ha day';
+        }
+   </script>
+        
+
+   
+</body>
+</html>

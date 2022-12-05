@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Điểm môn toán: <input type="text" id="DiemToan"><br>
+    Điểm môn Anh: <input type="text" id="DiemAnh"><br>
+    Điểm môn Văn: <input type="text" id="DiemVan"><br>
+    <select id="khuvuc" onchange="xuLyThayDoiKhuVuc(this)">
+        <option value="0.75">KV1</option>
+        <option value="0.5">KV2-NT</option>
+        <option value="0.25">KV2</option>
+        <option value="0">KV3</option>
+
+    </select><br>
+    <button type="button" onclick="TinhDiem()">Tính Điểm</button>
+    <div id="KetQua"></div>
+    <script>
+        function xuLyThayDoiKhuVuc(e) {
+           
+        }
+        function TinhDiem() {
+            let toan=parseFloat(document.getElementById("DiemToan").value);
+            let anh=parseFloat(document.getElementById("DiemAnh").value);
+            let van=parseFloat(document.getElementById("DiemVan").value);
+            let diemKhuVuc = parseFloat(document.getElementById("khuvuc").value);
+            let tongDiem = toan + van + anh + diemKhuVuc;
+            alert(tongDiem);
+            document.getElementById("KetQua").innerHTML=`Tổng điểm khối D của bạn = ${tongDiem}`
+        }
+    </script>
+    
+</body>
+</html>

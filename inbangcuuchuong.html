@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nhap so can in: <input type="text" id="soNhap">
+    <button type="button" onclick="inBangCuuChuong()">In bang cuu chuong</button>
+    <div id="ketQua">Ket Qua</div>
+    <script>
+        function inBangCuuChuong(){
+            let soDaNhap=parseInt(document.getElementById("soNhap").value);
+            // cach1 : Tao chuoi, noi chuoi, xuat
+            // let chuoi="";
+            // for (let i=1; i<11; i++)  {
+                // chuoi += `${soDaNhap} x ${i} = ${soDaNhap * i}<br>`;
+                // document.getElementById("ketQua").innerHTML=chuoi;
+            // }
+            let i=1;
+            while(i<11) {
+                let node = document.createElement("div");
+                node.innerHTML = `${soDaNhap} x ${i} = ${soDaNhap * i}<br>`
+                document.getElementById("ketQua").appendChild(node);
+                
+            }
+           
+        }
+    </script>
+</body>
+</html>
